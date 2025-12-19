@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Language Translator</title>
+    <link rel="icon" type="image/png" href="icon/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-left">
+            <h1 class="app-title">Language Translator</h1>
+        </div>
+        <div class="header-right">
+            <button class="dark-mode-toggle-header" id="dark-mode-toggle">
+                <i class="fas fa-moon" id="dark-mode-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Language Selection Bar -->
+    <div class="language-bar">
+        <div class="lang-item from-lang">
+            <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-icon" id="from-flag">
+            <span class="lang-name" id="from-lang-name">English</span>
+        </div>
+        <div class="swap-icon" id="swap-languages">
+            <i class="fas fa-exchange-alt"></i>
+        </div>
+        <div class="lang-item to-lang">
+            <img src="https://flagcdn.com/w40/es.png" alt="Spanish" class="flag-icon" id="to-flag">
+            <span class="lang-name" id="to-lang-name">Spanish</span>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Input Card -->
+        <div class="text-card input-card">
+            <div class="card-header">
+                <div class="card-lang">
+                    <span class="card-lang-name" id="input-lang-name">English</span>
+                    <i class="fas fa-volume-up speaker-icon" id="speak-input"></i>
+                </div>
+                <i class="fas fa-times clear-icon" id="clear-input"></i>
+            </div>
+            <textarea spellcheck="false" class="text-input from-text" id="from-text" placeholder="Enter text"></textarea>
+            <div class="card-footer">
+                <button class="mic-btn" id="mic-btn">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button class="translate-btn" id="translate-btn">Translate</button>
+            </div>
+        </div>
+
+        <!-- Output Card -->
+        <div class="text-card output-card">
+            <div class="card-header">
+                <div class="card-lang">
+                    <span class="card-lang-name" id="output-lang-name">Spanish</span>
+                    <i class="fas fa-volume-up speaker-icon" id="speak-output"></i>
+                </div>
+            </div>
+            <textarea spellcheck="false" readonly class="text-output to-text" id="to-text" placeholder="Translation"></textarea>
+            <div class="card-footer">
+                <div class="action-icons">
+                    <i class="fas fa-copy copy-icon" id="copy-output"></i>
+                    <i class="fas fa-share-alt share-icon" id="share-output"></i>
+                    <i class="far fa-star favorite-icon" id="favorite-output"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-item">
+            <i class="fas fa-microphone nav-icon"></i>
+            <span class="nav-label">Chat</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-camera nav-icon"></i>
+            <span class="nav-label">Camera</span>
+        </div>
+        <div class="nav-item active">
+            <div class="nav-icon-large">
+                <i class="fas fa-language"></i>
+            </div>
+            <span class="nav-label">Text</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-clock nav-icon"></i>
+            <span class="nav-label">History</span>
+        </div>
+        <div class="nav-item">
+            <i class="far fa-star nav-icon"></i>
+            <span class="nav-label">Favourite</span>
+        </div>
+    </nav>
+
+    <!-- Hidden select elements for translation API -->
+    <select id="from-select" style="display: none;"></select>
+    <select id="to-select" style="display: none;"></select>
+
+    <!-- Language Selection Modal -->
+    <div class="modal" id="lang-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Select Language</h2>
+                <i class="fas fa-times close-modal" id="close-modal"></i>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="search-lang" id="search-lang" placeholder="Search language...">
+                <div class="lang-list" id="lang-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/countries.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
