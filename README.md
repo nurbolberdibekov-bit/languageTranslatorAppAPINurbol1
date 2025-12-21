@@ -4,7 +4,7 @@
 Интерфейс приложения реализован на основе шаблона из **Figma Community** и адаптирован под мобильный UI.
 
 🔗 **Live demo:**
-[https://nurbolberdibekov-bit.github.io/languageTranslatorAppAPINurbol/](https://nurbolberdibekov-bit.github.io/languageTranslatorAppAPINurbol/)
+[https://nurbolberdibekov-bit.github.io/languageTranslatorAppAPINurbol/](https://nurbolberdibekov-bit.github.io/languageTranslatorAppAPINurbol1/)
 
 🎨 **Figma design:**
 [https://www.figma.com/design/I4mIXXFvaYiW2i9tEfM4sk/Language-Translator-App-UI-Design-%7C-Figma--Community-](https://www.figma.com/design/I4mIXXFvaYiW2i9tEfM4sk/Language-Translator-App-UI-Design-%7C-Figma--Community-)
